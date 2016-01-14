@@ -51,8 +51,13 @@ public class TestActivity extends Activity implements OnClickListener, OnLongCli
         btnColder = (Button) findViewById(R.id.btnColder);
         meter1    = (Gauge) findViewById(R.id.meter1);
         meter2    = (Gauge) findViewById(R.id.meter2);
-        
-        btnHotter.setOnClickListener(this);
+
+		//Turn off hardware acceleration
+		meter1.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
+		meter2.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
+		
+
+		btnHotter.setOnClickListener(this);
         btnColder.setOnClickListener(this);
         
     }

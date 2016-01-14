@@ -33,6 +33,8 @@ proguard/
 
 # Gradle
 build/
+**/build/**
+build/
 .gradle
 
 # vim swap files
